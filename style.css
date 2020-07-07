@@ -1,0 +1,431 @@
+@font-face {
+    font-family: Jazper;
+    src: url(font/Jazper.woff);
+}
+@font-face{
+    font-family: isaacIstVergeten;
+    src: url(font/AirbnbCerealBold.ttf)
+}
+/*Reset base padding and margin*/
+* { padding: 0; margin: 0; 
+box-sizing: border-box;}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.backgroundContainer{
+    min-height: 100vh;
+    background-size: cover;
+    background-position: 0px 90%; 
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+   
+}
+.backgroundHomepage{
+    background-image: url("images/home2k.jpg");
+}
+.backgroundWorkpage{
+    background-image: url("images/work.jpg");
+    justify-content: space-between;
+}
+.backgroundAboutpage{
+    background-image: url("images/aboutme.jpg");
+}
+.backgroundContactPage{
+    background-image: url("images/contact.jpg");
+}
+.logo{
+    width: 5%;
+    min-width: 75px;
+}
+
+header{
+    display: flex;
+}
+.siteNav{
+    display:flex;
+    padding: 10px 1%;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px;
+    text-shadow: 0px 0px 9px #948f8f;
+    margin-left: 1%;
+}
+.siteNav a{
+    font-size: 20px;
+    padding-top: 2px;
+    font-family: Jazper;
+    height: fit-content;
+}
+.siteNav a:after {
+    content: '';
+    display: block;
+    background: #fff;
+    width: 100%;
+    height: 3px;
+    margin: 0 auto;
+    transition: all .4s ease;
+  }
+  .ytplayer{
+    width: 100%;
+    height: 500px;
+    grid-column: 1 / 3;
+  }
+  /* .siteNav a:hover{
+    color: #6fcdd1
+  } */
+  .siteNav a:hover:after {
+    transform: translate(0, -24px);
+    background: #6fcdd1;
+  }
+  
+  .active:after{
+    content: '';
+    display: block;
+    background: #6fcdd1 !important;
+    width: 100%;
+    height: 3px;
+    margin: 0 auto;
+    transform: translate(0, -24px);
+  }
+
+.socialMediaNav{
+    margin-left: auto;
+    text-shadow: 0px 0px 9px #948f8f;
+}
+.socialMediaNav a{
+    
+    transition: 0.3s ease-in;
+}
+.socialMediaNav a:hover{
+    transform: translate(0, -24px);
+    text-shadow: none;
+    color: #6fcdd1;
+}
+.mission{
+    margin: 5% 7%
+}
+
+h1{
+    color: white;
+    font-family: Jazper;
+    font-size: 54px;
+}
+.mission p{
+    color: white;
+    font-family: isaacIstVergeten;
+    font-size: 18px;
+    text-shadow: 0px 0px 10px #080808;
+    margin-top: 10%;
+}
+.detailPoint{
+    color: #6fcdd1;
+}
+.detailComma{
+    font-family: isaacIstVergeten;
+}
+.attentionSeeker{
+    color: white;
+    font-family: Jazper;
+    font-size: 24px;
+    text-align:center;
+}
+.arrow{
+    min-width: 30px;
+    width: 2%;
+    margin-top: 10px;
+}
+.workShowcase{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30vh 30vh 30vh;
+    gap: 5vh;
+    max-width: 1000px;
+    margin: 5vh auto;
+    grid-template-areas: "knokke concerts"
+                         "aalst travel"
+                         "studentKickOff travel";
+}
+.workShowcase div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-family: Jazper;
+    font-size: 28px;
+    text-shadow: 0px 0px 10px #080808;
+    background-size: cover;
+
+}
+.showcase {
+    grid-gap: 5vh;
+    display: grid;
+    margin: 5vh 5vh;
+    grid-template-columns: 1fr 1fr;
+}
+.showcase img{
+    width: 100%;
+    height: 500px;
+    display:block;
+    object-fit: cover;
+}
+.travel { 
+    grid-area: travel; 
+    background-image: url("images/travel.jpg");
+    background-size: cover;
+}
+
+.knokke { 
+    grid-area: knokke;
+    background-image: url("images/KnokkeHeist.jpg");
+ }
+
+.concerts { 
+    grid-area: concerts; 
+    background-image: url("images/concerts.jpg");
+}
+
+.aalst {
+    grid-area: aalst;
+    background-image: url("images/AalstCarnaval.jpg");
+}
+
+.studentKickOff { 
+    grid-area: studentKickOff;
+    background-image: url("images/studentkickoff.jpg");
+ }
+ footer{ 
+     display:flex;
+     background-image: url("images/footerbackgroundv2.png");
+     padding: 3%;
+     color: white;
+     font-family: isaacIstVergeten;
+     font-size: 14px;
+}
+footer span{
+    margin-top: 4px;
+}
+main{
+    flex-grow: 1;
+}
+main form{
+    margin-top: 10vh;
+    margin: 10vh auto;
+    display: flex;
+    max-width: 500px;
+    justify-content: center;
+    flex-direction: column;
+}
+h3{
+    color: white;
+    font-family: isaacIstVergeten;
+    font-size: 15px;
+    margin-bottom: 6%;
+}
+label{
+    color: white;
+    font-family: isaacIstVergeten;
+    font-size: 18px;
+    margin-bottom: 1%;
+}
+input, textarea{
+    margin-bottom: 3%;
+    padding: 10px;
+    border-radius: 10%;
+    font-size: 13px;
+    border: none;
+    background-color:#ffffff99;
+    font-family: isaacIstVergeten;
+      border:solid 1px #ccc;
+      border-radius: 10px;
+}
+input:focus, textarea:focus{
+    outline: none;
+}
+button {
+    text-align:center;
+    width: fit-content;
+    padding: 2px 30px;
+    border: none;
+    background-color:#ffffff;
+    font-family: isaacIstVergeten;
+    border: solid 1px #ccc;
+
+      border-radius: 10px;
+      transition: 0.3s;
+}
+button:active{
+    box-shadow: none;
+    border: none;
+    outline: none;
+    transform: translate(3px, -2px);
+}
+.thanks h1{
+    font-size: 36px;
+}
+.thanks{
+    margin: 10% auto;
+    width: 500px;
+    text-shadow: 0px 0px 9px #948f8f;
+
+
+}
+.thanks h3{
+    font-size: 16px;
+    color:white;
+    margin-top: 10px;
+    font-family: IsaacIstVergeten;
+}
+
+/* submit knop*/
+
+  
+
+/*Mobile*/
+@media only screen and (max-width: 768px) {
+    .workShowcase{
+        grid-template-columns: 1fr;
+        grid-template-rows: 30vh 30vh 30vh 30vh 30vh;
+        grid-template-areas: none;
+        grid-template-areas: "knokke"
+                            "concerts"
+                            "aalst"
+                            "travel"
+                            "studentKickOff";
+    }
+    .socialMediaNav{
+        display: none;
+    }
+    .siteNav{
+        display:flex;
+        padding: 10px 2%;
+        justify-content: space-around;
+        width: 100%;
+        max-width: 300px;
+        text-shadow: 0px 0px 9px #948f8f;
+    
+    }
+    .backgroundHomepage{
+        background-image: url("images/home2k.jpg");
+        background-position-x: -400px;
+    }
+    .backgroundWorkpage{
+        background-image: url("images/workmobileversionHD.jpg");
+        background-position-x: -570px;
+        justify-content: space-between;
+    }
+    .backgroundAboutpage{
+        background-position-x: -570px;
+        background-image: url("images/aboutme.jpg");
+    }
+    .backgroundContactPage{
+        background-image: url("images/contact.jpg");
+    }
+    .mission h1{
+        margin-top: 20vh;
+        font-size: 36px;
+    }
+    .showcase {
+        grid-gap: 5vh;
+        display: grid;
+        margin: 5vh;
+        grid-template-columns: 1fr;
+    }
+    .showcase img{
+        height: auto;
+    }
+    .ytplayer{
+        width: 100%;
+        height: 500px;
+        grid-column: 1;
+      }
+}
+
+
+  
+  @keyframes spin {
+    0% {
+      transform: rotateZ(0);
+    }
+    100% {
+      transform: rotateZ(720deg);
+    }
+  }
+  
+  button {
+    position: relative;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding: 0;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    outline: 0;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  .spin {
+    border: 2px solid #1ecd97;
+    color: #1ecd97;
+    font-weight: 600;
+    transition: all 200ms ease-in-out;
+  }
+  .spin span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: opacity 200ms ease-in-out;
+  }
+  .spin span:last-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  .spin svg {
+    height: 30px;
+    fill: #1ecd97;
+  }
+  .spin:hover {
+    background-color: #1ecd97;
+    color: #fff;
+  }
+  .spin.done, .spin.processing {
+    pointer-events: none;
+    cursor: default;
+  }
+  .spin.processing {
+    width: 50px;
+    border-width: 4px;
+    border-right-color: #bbb;
+    border-bottom-color: #bbb;
+    animation: spin;
+    animation-delay: 200ms;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+  }
+  .spin.processing:hover {
+    background-color: transparent;
+  }
+  .spin.processing span:first-child {
+    opacity: 0;
+  }
+  .spin.done:hover {
+    background-color: transparent;
+  }
+  .spin.done span:first-child {
+    opacity: 0;
+  }
+  .spin.done span:last-child {
+    opacity: 1;
+  }
